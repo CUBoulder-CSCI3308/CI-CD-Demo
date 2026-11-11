@@ -10,7 +10,7 @@ export const TOPPINGS = [
   { id: 'jalapenos', name: 'Jalapeños' },
 ];
 
-export const TOPPING_PRICE_CENTS = 150;
+export const TOPPING_PRICE_CENTS = 100;
 export const PROMO_CODE = 'PIZZA10';
 export const DELIVERY_FEE_CENTS = 350;
 
