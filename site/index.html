@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Slice</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header>
+    <div class="wrap masthead">
+      <div>
+        <p class="brand">CAMPUS SLICE</p>
+        <h1>Build your pizza order.</h1>
+        <p>Pick a pie, make it yours, and see your total.</p>
+      </div>
+      <div class="pizza-mark" aria-hidden="true">🍕</div>
+    </div>
+  </header>
+  <main class="wrap layout">
+    <section aria-labelledby="menu-title">
+      <h2 id="menu-title">Pizza menu</h2>
+      <p class="muted">Add extra toppings for $1.50 each.</p>
+      <div id="menu" class="menu"></div>
+    </section>
+    <section class="order" aria-labelledby="order-title">
+      <h2 id="order-title">Your order <span id="count" class="count" aria-label="0 pizzas">0</span></h2>
+      <ul id="cart" class="cart"></ul>
+      <p id="empty" class="muted">Choose a pizza to start your order.</p>
+      <fieldset>
+        <legend>Order method</legend>
+        <label><input type="radio" name="fulfillment" value="pickup" checked> Pickup</label>
+        <label><input type="radio" name="fulfillment" value="delivery"> Delivery (+$3.50)</label>
+      </fieldset>
+      <form id="promo-form">
+        <label for="promo">Promo code</label>
+        <div class="promo-row">
+          <input id="promo" type="text" placeholder="Try PIZZA10" autocomplete="off" aria-describedby="promo-feedback">
+          <button type="submit" class="secondary">Apply</button>
+        </div>
+        <p id="promo-feedback" class="muted feedback" role="status"></p>
+      </form>
+      <dl class="receipt" aria-live="polite">
+        <div><dt>Subtotal</dt><dd id="subtotal">$0.00</dd></div>
+        <div><dt>Discount</dt><dd id="discount">$0.00</dd></div>
+        <div><dt>Delivery</dt><dd id="delivery">$0.00</dd></div>
+        <div class="total"><dt>Total</dt><dd id="total">$0.00</dd></div>
+      </dl>
+      <p id="cart-feedback" class="visually-hidden" role="status"></p>
+    </section>
+  </main>
+</body>
+</html>
