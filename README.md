@@ -41,17 +41,4 @@ git push -u origin main
 
 The last cart test is an integration test. It exercises the cart and pricing modules together. The automated suite runs in Node.js. Use the browser walkthrough above to check the UI.
 
-## Classroom walkthrough
 
-1. **Start with a passing run.** Open the workflow in **Actions**. Find the test output, then follow the deployment URL.
-2. **Introduce a regression.** On a new branch, change `TOPPING_PRICE_CENTS` from `150` to `100` in `site/pricing.js`. Open a PR into `main`. Ask which tests should fail and why. Check the log for failures in both the pricing and cart suites.
-3. **Repair and deploy.** Restore the topping price to `150` and change the heading in `site/index.html`. Push the fix, confirm the PR tests pass, then merge. The merge triggers a new run on `main`. Once it succeeds, refresh the deployed page to see the new heading.
-4. **Show the deployment gate.** If you want to demonstrate what happens when a bad commit lands on `main`, push the pricing regression directly in a disposable demo repository. The failed tests block deployment and the prior site remains live. Revert the bad commit.
-
-| Event | Run tests | Package and deploy |
-| --- | --- | --- |
-| Pull request into `main` | Yes | Skipped |
-| Push to `main`, tests pass | Yes | Yes |
-| Push to `main`, tests fail | Yes | Skipped |
-
-**Discussion.** Suppose selecting Delivery in the browser leaves the total unchanged, while all tests pass. Which layer would you test next, and what would you assert?
