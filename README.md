@@ -15,22 +15,6 @@ python3 -m http.server 8000 --directory site
 
 Visit <http://localhost:8000>. Add a Margherita with black olives and a plain Pepperoni. Choose delivery and apply `PIZZA10`. The total should be $21.05.
 
-## Set up GitHub
-
-1. Create an empty public GitHub repository. Unzip the project and enter the `pizza-ci-cd` directory. Keep the hidden `.github` directory with the project.
-2. Run the commands below with your repository URL. If you already have a repository from the earlier demo, copy these files into your existing checkout and push a normal commit or PR.
-3. In the repository, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**. If the first push ran before Pages was enabled, rerun it from **Actions**.
-
-```sh
-git init -b main
-git add .
-git commit -m "Add Campus Slice and CI/CD workflow"
-git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO.git
-git push -u origin main
-```
-
-[GitHub Docs — Using custom workflows with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
-
 ## Test coverage
 
 | File | What it checks |
@@ -41,4 +25,4 @@ git push -u origin main
 
 The last cart test is an integration test. It exercises the cart and pricing modules together. The automated suite runs in Node.js. Use the browser walkthrough above to check the UI.
 
-
+_Made in collaboration with Generative AI tools_
